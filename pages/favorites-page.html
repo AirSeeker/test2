@@ -1,4 +1,4 @@
   <div class="col-md-12">
-    <input type="checkbox" class="glyphicon glyphicon-star-empty" data-index="{{index}}" onclick="$dc.favoriteCheckbox($(this).is(':checked'), $(this).data('index')); $dc.favoritesInFriendsList();" {{checked}}>
+    <input type="checkbox" class="glyphicon glyphicon-star-empty" onclick="$dc.favoriteCheckbox($(this).is(':checked'), {{index}}, {{id}}); $dc.favoritesInFriendsList();" {{checked}}>
     <a href="#" onclick="$dc.openFriendInfo('{{index}}');">{{name}}{{age}}</a>
   </div>

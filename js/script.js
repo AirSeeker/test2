@@ -73,6 +73,14 @@ function checkForDuplicate(arr, word) {
   return true;
 }
 
+function deleteFavorite(id, arrayForDelete) {
+  for(var index in arrayForDelete){
+    if(arrayForDelete[index].id === id){
+      arrayForDelete.splice(index, 1);
+    }
+  }
+}
+
 $(document).ready( function (event) {
   
 showLoading("#main-content");
@@ -118,14 +126,16 @@ dc.favoritesInFriendsList = function(){
 collapseNavBar();
 };
 
-dc.favoriteCheckbox = function(status, index){
+dc.favoriteCheckbox = function(status, index, id){
   if(status === true){
     var isDuplicate = checkForDuplicate(favoriteFriendsDataArray, friendsDataArray[index].name);
     if(isDuplicate === false){
        favoriteFriendsDataArray.push(friendsDataArray[index]);
+    }else{
+      deleteFavorite(id, favoriteFriendsDataArray);
     }
   }else{
-    favoriteFriendsDataArray.splice(index, 1);
+      deleteFavorite(id, favoriteFriendsDataArray);
   }
 };
 ///////////////////////////////////////////////////////////
@@ -231,6 +241,7 @@ function buildFriendsListHtml (list, pageTitleHtmlUrl, pageHtmlUrl){
       }
       var html = pageHtmlUrl;
       var index = i;
+      var id = list[i].id;
       var name = ''+ list[i].name;
       var birthDate = ''+ list[i].birthDate;
       var bd = new Date(birthDate);
@@ -241,6 +252,7 @@ function buildFriendsListHtml (list, pageTitleHtmlUrl, pageHtmlUrl){
       html = insertProperty(html, "name", name);
       html = insertProperty(html, "age", age);
       html = insertProperty(html, "checked", check);
+      html = insertProperty(html, "id", id);
       finalHtml += html;
     }
   finalHtml += '</section></div></div>';
