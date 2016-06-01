@@ -1,0 +1,100 @@
+html,
+body {
+  margin:0;
+  padding:0;
+  height:100%;
+}
+
+body {
+  font-size: 16px;
+  background-color: #6699ff;
+  font-family: sans-serif;
+}
+#wrapper {
+  min-height:100%;
+  position:relative;
+}
+#about{
+  padding: 25px;
+}
+#search input[type=text]{
+margin: 15px;
+border-radius: 5px;
+}
+/** MAIN CONTENT **/
+#main-content{
+padding-bottom:100px
+}
+.container .jumbotron {
+  box-shadow: 0 0 50px #3F0C1F;
+  border: 2px solid #3F0C1F;
+  padding-left: 25px;
+}
+#title{
+  color: #B84EF5;
+  text-shadow: 4px 4px 8px rgba(150, 150, 150, 1);
+}
+/** END MAIN CONTENT **/
+/** FAVORITE **/
+.glyphicon.glyphicon-star-empty:before {
+ visibility: visible;
+}
+.glyphicon.glyphicon-star-empty:checked:before {
+   content: "\e006";
+}
+input[type=checkbox].glyphicon{
+  visibility: hidden;
+  margin: 0;
+  line-height: 1;
+}
+/** END FAVORITE **/
+/** HEADER **/
+#header-nav {
+  background-color: #F2D972;
+  border-radius: 0;
+  border: 0;
+}
+#nav-list {
+  margin-top: 10px;
+}
+#nav-list a {
+  color: #72A9F2;
+  text-align: center;
+}
+#nav-list a:hover {
+  background: #E7E7E7;
+}
+#nav-list a span {
+  font-size: 1.8em;
+}
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+  border: 1px solid #61122f;
+}
+.navbar-header button.navbar-toggle {
+  margin: 8px 0 8px 15px;
+  clear: both;
+}
+/* END HEADER */
+
+/* FOOTER */
+footer {
+  height: 60px;
+  position:absolute;
+  width:100%;
+  bottom: 0;
+  background-color: #222;
+  border: none;
+  padding: 20px;
+  color: #fff;
+}
+/* END FOOTER */
+
+@media (max-width: 767px) {
+  #collapsable-nav a { /* Collapsed nav menu text */
+    font-size: 1.2em;
+  }
+  #collapsable-nav a span { /* Collapsed nav menu glyph */
+    font-size: 1em;
+    margin-right: 5px;
+  }
+}

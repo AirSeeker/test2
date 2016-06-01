@@ -1,0 +1,21 @@
+[
+  {
+    "id": 1,
+    "name": "Albert",
+    "secondName": "Lee",
+    "birthDate": "1985-12-23",
+    "city": "LA"
+  }, {
+    "id": 2,
+    "name": "Dan",
+    "secondName": "Haas",
+    "birthDate": "1980-02-23",
+    "city": "SFO"
+  }, {
+    "id": 3,
+    "name": "Igor",
+    "secondName": "Sidorenko",
+    "birthDate": "1991-03-15",
+    "city": "Kyiv"
+  }
+]

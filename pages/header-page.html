@@ -1,0 +1,33 @@
+    <nav id="header-nav" class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button id="navbarToggle" type="button" class="navbar-toggle collapsed pull-left" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        
+        <div id="collapsable-nav" class="collapse navbar-collapse navbar-left">
+           <ul id="nav-list" class="nav navbar-nav navbar-right">
+            <li id="navMenuButton">
+              <a href="index.html" onclick="">
+                <span class="glyphicon glyphicon-info-sign"></span><br class="hidden-xs"> About</a>
+            </li>
+            <li>
+              <a href="#"  onclick="$dc.searchInFriendsList();">
+                <span class="glyphicon glyphicon-search"></span><br class="hidden-xs"> Search</a>
+            </li>
+            <li>
+              <a href="#"  onclick="$dc.favoritesInFriendsList();">
+                <span class="glyphicon glyphicon-star-empty"></span><br class="hidden-xs"> Favorites</a>
+            </li>
+            <li>
+              <a href="#" onclick="$dc.loadFriendsList();">
+                <span class="glyphicon glyphicon-user"></span><br class="hidden-xs"> Friends</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
