@@ -35,6 +35,7 @@ padding-bottom:100px
   text-shadow: 4px 4px 8px rgba(150, 150, 150, 1);
 }
 /** END MAIN CONTENT **/
+
 /** FAVORITE **/
 .glyphicon.glyphicon-star-empty:before {
  visibility: visible;
@@ -48,6 +49,7 @@ input[type=checkbox].glyphicon{
   line-height: 1;
 }
 /** END FAVORITE **/
+
 /** HEADER **/
 #header-nav {
   background-color: #F2D972;

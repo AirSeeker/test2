@@ -1,13 +1,3 @@
-function collapseNavBar(){
-      var screenWidth = window.innerWidth;
-    if (screenWidth < 768) {
-      $("#collapsable-nav").collapse('hide');
-    } 
-}
-$(document).click(function(){
-  collapseNavBar();
-});
-
 (function (global) {
 
 var dc = {};
@@ -81,6 +71,17 @@ function deleteFavorite(id, arrayForDelete) {
   }
 }
 
+function collapseNavBar(){
+      var screenWidth = window.innerWidth;
+    if (screenWidth < 768) {
+      $("#collapsable-nav").collapse('hide');
+    } 
+}
+
+$(document).click(function(){
+  collapseNavBar();
+});
+
 $(document).ready( function (event) {
   
 showLoading("#main-content");
@@ -108,6 +109,19 @@ $ajaxUtils.sendGetRequest(
   false); 
 
 });
+
+///////////////////////////////////////////////////////////
+////////////////////Home page//////////////////////////////
+///////////////////////////////////////////////////////////
+dc.loadHomePage = function(){
+$ajaxUtils.sendGetRequest(
+  homeHtmlUrl, 
+  function (responseText){
+    $('#main-content').html(responseText);
+  },
+  false); 
+};
+
 ///////////////////////////////////////////////////////////
 ////////////////////Favorit list///////////////////////////
 ///////////////////////////////////////////////////////////
@@ -259,8 +273,6 @@ function buildFriendsListHtml (list, pageTitleHtmlUrl, pageHtmlUrl){
   return finalHtml;
 }
 
-
 global.$dc = dc;
 
 })(window);
-
