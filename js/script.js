@@ -179,7 +179,7 @@ function buildAndShowFriendsSearchList (list){
 dc.lookUpForFriend = function (value) {
   if(value.length >= 2){
     $("#search a").each(function(){
-      if($(this).html().toLowerCase().indexOf(value) >= 0){
+      if($(this).html().toLowerCase().indexOf(value.toLowerCase()) >= 0){
         $(this).parent().show();
       }else {
         $(this).parent().hide();
